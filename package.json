@@ -1,0 +1,62 @@
+{
+  "name": "divastakingdao",
+  "version": "1.0.0",
+  "description": "## Governance aspects - DAO Treasury - Approve protocol migrations - MEV decisions: list of whitelisted relays - Oracle members, oracle quorum - Beacon specs, beacon boundaries - Withdrawal credentials key",
+  "main": "index.js",
+  "scripts": {
+    "precompile": "rimraf ./build/",
+    "compile": "hardhat compile",
+    "node:hardhat": "hardhat node --network hardhat",
+    "console": "hardhat console",
+    "run": "hardhat run",
+    "generate-merkle-root": "ts-node scripts/generate-merkle-root.ts",
+    "generate-merkle-root:example": "ts-node scripts/generate-merkle-root.ts --input scripts/airdrop_allocations/new_example.json  --output scripts/airdrop_allocations/merkleroot.json",
+    "generate-merkle-root:radish": "ts-node scripts/generate-merkle-root.ts --input scripts/airdrop_allocations/airdrop_radish.json  --output scripts/airdrop_allocations/merkleroot_radish.json",
+    "verify-merkle-root:radish": "ts-node scripts/merkle_distributor/verify-merkle-root.ts --input scripts/airdrop_allocations/merkleroot_radish.json",
+    "prepublishOnly": "yarn test",
+    "test": "hardhat test",
+    "test:timelock": "hardhat test test/DivaTimeLockController.test.ts",
+    "test:merkle": "hardhat test test/MerkleDistributor.test.ts",
+    "test:diva-merkle": "hardhat test test/MerkleDistributor.Diva.test.ts",
+    "test:coverage": "COVERAGE=true hardhat coverage",
+    "deploy:goerli": "hardhat deploy --network goerli --reset",
+    "test:e2e": "hardhat test test/e2e.test.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shamirlabs/divastakingdao.git"
+  },
+  "author": "Shamir Labs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shamirlabs/divastakingdao/issues"
+  },
+  "homepage": "https://github.com/shamirlabs/divastakingdao#readme",
+  "devDependencies": {
+    "@ethersproject/abi": "^5.7.0",
+    "@ethersproject/providers": "^5.7.2",
+    "@nomicfoundation/hardhat-chai-matchers": "^1.0.6",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.8",
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers@^0.3.0-beta.10",
+    "@nomiclabs/hardhat-etherscan": "^3.1.6",
+    "@typechain/ethers-v5": "^10.2.0",
+    "@typechain/hardhat": "^6.1.5",
+    "@types/mocha": "^10.0.1",
+    "chai": "^4.3.7",
+    "commander": "^8.1.0",
+    "ethereum-waffle": "^4.0.10",
+    "ethers": "^5.5.3",
+    "hardhat": "^2.12.7",
+    "hardhat-deploy": "^0.11.26",
+    "hardhat-gas-reporter": "^1.0.9",
+    "solidity-coverage": "^0.8.2",
+    "ts-node": "^10.9.1",
+    "typechain": "^8.1.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.8.1",
+    "dotenv": "^16.0.3"
+  }
+}

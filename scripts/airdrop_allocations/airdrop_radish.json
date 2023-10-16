@@ -1,0 +1,22 @@
+[
+  {
+    "address": "0x3c0e20fCA6d2E084127D056377a5f35294503447",
+    "earnings": "0x56BC75E2D63100000",
+    "reasons": "socks"
+  },
+  {
+    "address": "0xFA45F505b93c344F8dC2CaeB96Ec786569775d67",
+    "earnings": "0x56BC75E2D63100000",
+    "reasons": "socks,user"
+  },
+  {
+    "address": "0x3660650755B12555BBAc2284c2391ccBB4EBFDD6",
+    "earnings": "0x56BC75E2D63100000",
+    "reasons": "socks,user"
+  },
+  {
+    "address": "0x4f356C332C9e92098252A56aab1Ca4054b296BBd",
+    "earnings": "0x56BC75E2D64100000",
+    "reasons": "socks,user"
+  }
+]
